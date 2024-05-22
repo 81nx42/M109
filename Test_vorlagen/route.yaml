@@ -1,0 +1,9 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: my-route
+spec:
+  host: www.example.com  # The URL where the service will be exposed
+  to:
+    kind: Service
+    name: my-service  # The service to route traffic to

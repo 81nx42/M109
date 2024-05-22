@@ -1,0 +1,20 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: my-build-config
+spec:
+  source:
+    type: Git
+    git:
+      uri: 'https://github.com/username/repository.git'  # Git repository URL
+  strategy:
+    type: Source
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: 'nodejs:10'  # Base image for the build
+        namespace: openshift
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'my-app:latest'  # Target image stream for the output

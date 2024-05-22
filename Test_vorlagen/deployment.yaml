@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3  # Number of pod replicas
+  selector:
+    matchLabels:
+      app: my-app  # Selector to identify pods with this label
+  template:
+    metadata:
+      labels:
+        app: my-app  # Label for the pod template
+    spec:
+      containers:
+      - name: my-app  # Name of the container
+        image: my-app:1.0.0  # Docker image to use

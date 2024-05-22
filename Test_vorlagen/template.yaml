@@ -1,0 +1,13 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  name: my-template
+objects:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    name: my-pod
+  spec:
+    containers:
+    - name: my-container
+      image: ' '  # Placeholder for an image, typically replaced by a parameter
