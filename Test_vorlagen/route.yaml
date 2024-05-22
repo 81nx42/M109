@@ -6,4 +6,4 @@ spec:
   host: www.example.com  # The URL where the service will be exposed
   to:
     kind: Service
-    name: my-service  # The service to route traffic to
+    name: my-service  # zu welchem service der route zeigen soll
